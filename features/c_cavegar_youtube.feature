@@ -9,7 +9,7 @@ Funcionalidade: Cadastrar Procedimento
     Dado acesso a pagina inicial do Youtube
     Quando clico no campo de busca
     E clico no video
-    E insiro dados de um novo procedimento
+    E pauso o video e deixo em tela cheia
     E clico em salvar procedimento
     E clico no botão novo item procedimento
     E insiro dados de um item de procedimento

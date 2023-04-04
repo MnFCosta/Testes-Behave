@@ -33,7 +33,10 @@ def step_impl(context):
 
     WebDriverWait(context.driver,5).until(EC.element_to_be_clickable((By.XPATH, "/html/body/ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]/ytd-thumbnail/a/yt-image/img"))).click()
     action.perform()
-    time.sleep(5)
+
+
+
+    
 
 
 """ @when(u'clico no video')
