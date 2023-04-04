@@ -12,8 +12,7 @@ def before_scenario(context, scenario):
     context.driver.implicitly_wait(15)
 
 def after_scenario(context,scenario):
-    print()
-    #print("Pessoa cadastrada: "+context.pessoa)
+    print(f"\nAluno: {context.nome}")
 
 
 def after_all(context):  

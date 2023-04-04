@@ -6,10 +6,9 @@ Funcionalidade: Cadastrar Procedimento
     '''
 
     Cenario: Cadastrar procedimento
-    Dado acesso a pagina inicial do sistema Florence Teste
-    Quando Realizo o Login no sistema
-    E clico no menu Procedimentos
-    E clico no botão novo procedimento
+    Dado acesso a pagina inicial do Youtube
+    Quando clico no campo de busca
+    E clico no video
     E insiro dados de um novo procedimento
     E clico em salvar procedimento
     E clico no botão novo item procedimento
