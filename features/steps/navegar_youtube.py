@@ -33,33 +33,9 @@ def step_impl(context):
 
     WebDriverWait(context.driver,5).until(EC.element_to_be_clickable((By.XPATH, "/html/body/ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]/ytd-thumbnail/a/yt-image/img"))).click()
     action.perform()
+    time.sleep(4)
 
-
-
-    
-
-
-""" @when(u'clico no video')
+@then(u'retorno a página principal do Youtube')
 def step_impl(context):
-    action = ActionChains(context.driver)
-    
-    video = WebDriverWait(context.driver,5).until(EC.element_to_be_clickable((By.XPATH, "/html/body/ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer")))
-    action.move_to_element(video).perform()
-
-    WebDriverWait(context.driver,5).until(EC.element_to_be_clickable((By.XPATH, "/html/body/ytd-app/div[1]/ytd-page-manager/ytd-search/div[1]/ytd-two-column-search-results-renderer/div/ytd-section-list-renderer/div[2]/ytd-item-section-renderer/div[3]/ytd-video-renderer[1]/div[1]/ytd-thumbnail/a/yt-image/img"))).click()
-    action.perform()
-    time.sleep(5)
-    
-
-
-
-@then(u'O procedimento cadastrado deve ser apresentada no primeiro registro da consulta.')
-def step_impl(context):
-    context.pessoa = WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.ID,'id_sc_field_id_pessoa_1'))).text
-    if (context.pessoa != 'NOME TESTE'):
-        raise Exception('Erro ao cadastrar um novo Procedimento')
-    else:
-        #Sai do sistema
-        context.driver.switch_to.default_content()
-        WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.ID,'item_13'))).click()
-        time.sleep(3) """
+    WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.XPATH,'//*[@id="logo-icon"]'))).click()
+    time.sleep(2)

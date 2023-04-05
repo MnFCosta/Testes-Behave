@@ -7,9 +7,6 @@ from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.common.action_chains import ActionChains
 import time
 
-#context.driver.switch_to.frame(context.driver.find_element(By.ID,'iframe_item_1'))
-#context.driver.switch_to.default_content() #para voltar ap frame principal
-#Variavel com a URL do site que iremos acessar
 base_url = 'https://moodle.ifsc.edu.br/'
 
 
@@ -22,8 +19,8 @@ def step_impl(context):
 @when(u'faço login no sistema')
 def step_impl(context):
     actions = ActionChains(context.driver)
-    WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.NAME,'username'))).send_keys('')
-    WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.NAME,'password'))).send_keys('')
+    WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.NAME,'username'))).send_keys('manoel.f2002')
+    WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.NAME,'password'))).send_keys('Manoel1010')
     actions.send_keys(Keys.ENTER).perform()
     time.sleep(1)
     
