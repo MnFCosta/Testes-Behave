@@ -1,4 +1,3 @@
-
 from behave import given, when, then
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
@@ -18,10 +17,13 @@ def step_impl(context):
 
 @when(u'faço login no sistema')
 def step_impl(context):
+    alert = context.driver.switch_to.alert
+    alert.accept()
     actions = ActionChains(context.driver)
     WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.NAME,'username'))).send_keys('manoel.f2002')
     WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.NAME,'password'))).send_keys('Manoel1010')
     actions.send_keys(Keys.ENTER).perform()
+    
     time.sleep(1)
     
 
@@ -63,4 +65,3 @@ def step_impl(context):
 def step_impl(context):
     WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.XPATH,'/html/body/div[4]/div/div[2]/section[2]/aside[1]/div[2]/div[2]/ul/li/ul/li[1]/p/a/span'))).click()
     time.sleep(1)
-    context.nome = WebDriverWait(context.driver, 20).until(EC.element_to_be_clickable((By.ID,'action-menu-toggle-0'))).text

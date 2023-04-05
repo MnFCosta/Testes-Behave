@@ -12,7 +12,7 @@ def before_scenario(context, scenario):
     context.driver.implicitly_wait(15)
 
 def after_scenario(context,scenario):
-    print(f"\nAluno: {context.nome}")
+    print("Passou!")
 
 
 def after_all(context):  
